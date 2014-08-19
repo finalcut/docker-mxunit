@@ -8,7 +8,6 @@ RUN apt-get install -y unzip
 ADD https://github.com/downloads/mxunit/mxunit/mxunit-2.1.3.zip /var/www/mxunit.zip
 
 WORKDIR /var/www
-RUN tar -xzf coldspring.tar.gz
 RUN unzip -qq  mxunit.zip
 RUN rm mxunit.zip
 VOLUME /var/www/mxunit
