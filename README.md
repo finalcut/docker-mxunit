@@ -1,7 +1,10 @@
-# How to use this Image
+# What is mxunit
+[Mxunit](http://mxunit.org/) is a unit testing framework for coldfusion.  It was developed [a bunch of by people other than me](http://wiki.mxunit.org/display/default/MXUnit+Documentation).
+
+## How to use this Image
 =============
 
-## start the image
+### start the image
 
 ```
   docker run -it --name mxunit finalcut/mxunit
@@ -9,7 +12,7 @@
 After the container starts feel free to `exit` it.  The container does not need to be running to be used.
 
 
-## connect to it from another container
+### connect to it from another container
 
 ```
   docker run -d -p 8880:80 -v /var/www:/var/www --volumes-from mxunit finalcut/coldfusion10
