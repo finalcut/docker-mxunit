@@ -5,11 +5,11 @@ ENV REFRESHED_AT 2014_08_19_1
 RUN apt-get update
 RUN apt-get install -y unzip
 
-ADD https://github.com/downloads/mxunit/mxunit/mxunit-2.1.3.zip /var/www/mxunit.zip
+ADD https://github.com/downloads/mxunit/mxunit/mxunit-2.1.3.zip /tmp/mxunit.zip
 
-WORKDIR /var/www
+WORKDIR /tmp
 RUN unzip -qq  mxunit.zip
 RUN rm mxunit.zip
-VOLUME /var/www/mxunit
+VOLUME /tmp/mxunit
 
 CMD ["/bin/sh"]
